@@ -1,0 +1,37 @@
+﻿@model IEnumerable<ProyectoAnalisis.Model.Factura>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<div>
+    <br>
+    @Html.ActionLink("Crear Factura", "Create", null, new { @class = "btn btn-primary" })
+
+</div><br>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaDeEmision)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdLinea)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaDeEmision)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdLinea)
+        </td>
+       
+    </tr>
+}
+
+</table>

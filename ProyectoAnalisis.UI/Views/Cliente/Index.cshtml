@@ -1,0 +1,72 @@
+﻿@model IEnumerable<ProyectoAnalisis.Model.Cliente>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<div>
+    <br>
+    @Html.ActionLink("Nuevo Cliente", "Create", null, new { @class = "btn btn-success" })
+</div>
+<br>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Numero)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreComercial)
+        </th>
+      
+        <th>
+            @Html.DisplayNameFor(model => model.CodigoPais)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumeroTelefono)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Correo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OtrasSeñas)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Numero)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreComercial)
+        </td>
+       
+        <td>
+            @Html.DisplayFor(modelItem => item.CodigoPais)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumeroTelefono)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Correo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OtrasSeñas)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.Id }) 
+           
+        </td>
+    </tr>
+}
+
+</table>

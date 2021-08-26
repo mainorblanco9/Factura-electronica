@@ -1,0 +1,64 @@
+﻿@model IEnumerable<ProyectoAnalisis.Model.Cierres>
+
+@{
+    ViewBag.Title = "Index";
+    
+    
+
+}
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+    
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div class="form-group">
+        <div >
+            <input type="submit" value="Generar" class="btn btn-success" />
+        </div>
+    </div>
+    <div>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.FechaDeEmision)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MontoToTal)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NombreDelUsuario)
+                </th>
+
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FechaDeEmision)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MontoToTal)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NombreDelUsuario)
+                    </td>
+
+                </tr>
+            }
+
+        </table>
+
+
+
+    </div>
+
+</div>
+}
