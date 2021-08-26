@@ -1,0 +1,1 @@
+IF-6100,Proyecto Anlisis de sistemas UCR SEDE GTE-Mainor Andrés Blanco Chaves B51040, Michael Betancourt Mora B81126, Guillermo Chavarría Ortiz B61926, Yarod Gerardo Orozco Rodríguez B75559. Proyecto programado IF-6100 UCR
